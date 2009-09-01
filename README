@@ -1,0 +1,54 @@
+# RIDDIM 
+#  
+#  -> Remote Interactive Digital Drone Interface Mashup
+#
+# Author: 	 Marcus -ligi- Bueschleb
+#
+# Contact: ligi
+#	   -at-
+#	   smart4mobile.de
+#
+# Project Start: 12/2007
+#
+# Credits:
+#          Holger & Ingo for the Mikrokopter Project ( www.mikrokopter.de ).
+#	   eduard -- - at - -- hasenleithner.at for the linux x-52 lib
+#          Jo aka XM for helping with openwrt
+#          sublab.org for infrastructure
+
+
+= Documentation / Infos =
+ http://www.mikrokopter.de/ucwiki/en/Riddim
+  
+= Licence =
+
+ http://creativecommons.org/licenses/by-nc-sa/2.0/de/  (Creative Commons / Non Commercial / Share Alike 
+ Addtitonally to this Licence it is not allowed to use this software in any violent manner.
+ This explicitly includes that lethal Weapon owning "People" (e.g. Army & Police) are not allowed to use this Project
+ If you want to use this tool in any Commercial Context - please contact me first!
+
+
+=Compile=
+ $> make
+ 
+=Run=
+ $> ./riddim [configfile]
+
+ if no configfile is given riddim is trying to load "/etc/riddim.conf". If that fails riddim is using default values ( not very usefull perhaps )
+
+example socat usage:
+ socat tcp-l:54321,reuseaddr,fork file:/dev/ttyUSB0,b57600,waitlock=/var/run/rfcomm0.lock
+
+
+
+= Changelog =
+
+ 0.8 - Modify altitude by input
+ 0.7 - new MK Protocol
+ 0.6 - misc
+ 0.5 - code cleanup 
+ 0.4 - Measure time from send command to confirm 
+ 0.3 - mode selector 
+ 0.2 - first version with possibility to fly ( based on FC0.68b commands )
+ 0.1 - initial release with basic functions and proove of concept Code ( Scanning for Blueooth Devices / read Joy / communicate to MK / ..)
+ 

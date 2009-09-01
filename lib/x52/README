@@ -1,0 +1,30 @@
+This is the first release of the Linux library for the MFD and the
+LEDs found on the SAITEK X52 ( and PRO ) HOTAS joystick. The informations needed
+for accessing this nice device where kindly supplied by saitek.
+
+The code is released under the LGPL. For more details please read the
+COPYING file.
+
+Compilation of this library requires the libusb http://www.linux-usb.org/
+
+The library itself consists of the x52.c and the x52.h file.
+Programs which want to use the library have to link "x52.o" and
+the libusb. For more details please have a look at the Makefile
+supplied with this package. The Makefile builds a test program
+named x52test.
+
+With the x52test program it is possible to test all the features
+of the library:
+
+x52test text 0 'First Line'
+x52test text 1 'Second Line'
+x52test text 2 'Third Line'
+x52test bri 0 40
+x52test bri 1 50
+x52test led 1 1
+x52test time 1 12 20
+x52test date 7 10 17
+
+If you have any questions regarding using this library and/or the x52 (pro)
+please send an email to <eduard@hasenleithner.at>. I also welcome
+any hints for improvements of this library.

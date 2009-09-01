@@ -1,0 +1,10 @@
+Aviator:
+ A0 Roll
+ A1 Nick
+ A2 Gas1
+ A3 Gier
+ A4 Gas2
+
+
+B12 Init 
+B13 Spinup
